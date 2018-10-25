@@ -19,7 +19,8 @@ const oddValues = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named filterStringsWithVowels that, given an array of strings as input, uses filter to return an array with only words that contain vowels.
+Write a function named filterStringsWithVowels that, given an array of strings as input, uses filter to return an array 
+with only git awords that contain vowels.
 
 The callback function to filter should include or utilize a regular expression pattern.
 
@@ -28,7 +29,8 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 
 const filterStringsWithVowels = (arr) => {
-  // Solution code here...
+  let regex = /\w+([aeiou])\w+/
+  return arr.filter(word => word.match(regex));
 };
 
 
