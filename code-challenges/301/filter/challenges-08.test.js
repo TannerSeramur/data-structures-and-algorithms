@@ -29,7 +29,7 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 
 const filterStringsWithVowels = (arr) => {
-  let regex = /\w+([aeiou])\w+/
+  let regex = /(\w+([aeiou])\w+)|([aeiou])|(\w+([aeiou]))|(([aeiou])\w+)/g
   return arr.filter(word => word.match(regex));
 };
 
@@ -37,13 +37,18 @@ const filterStringsWithVowels = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named notInFirstArray that, given two arrays as input, uses filter to return an array of all the elements in the second array that are not included in the first array.
+Write a function named notInFirstArray that, given two arrays as input, uses filter to return an array of all the elements 
+in the second array that are not included in the first array.
 
 For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
+    return arr.filter((e)=>{
+        if(!forbiddenValues.includes(e)){
+          return e;
+        }
+      })
 };
 
 /* ------------------------------------------------------------------------------------------------
