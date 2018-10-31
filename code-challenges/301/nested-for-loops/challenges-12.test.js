@@ -27,9 +27,16 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  for(let i=0; i>stores.length; i++){
-      console.log(i);
-  }
+    for(let i=0; i<stores.length; i++){
+        let sum = 0;
+        for(let j=0; j<stores[i].length; j++){
+          sum = sum + stores[j][i];
+          // console.log(stores[j][i])
+          console.log(sum);
+    
+        }
+        // console.log(sum);
+      }
 
 }
 
