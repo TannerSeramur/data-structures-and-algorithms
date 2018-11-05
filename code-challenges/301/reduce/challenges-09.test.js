@@ -3,19 +3,22 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 
-Write a function named countNumberOfElements that, given an array as input, uses reduce to count the number of elements in the array.
+Write a function named countNumberOfElements that, given an array as input, 
+uses reduce to count the number of elements in the array.
 
 Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
-  // Solution code here...
+  const add = (accumulator) => accumulator + 1;
+  return arr.reduce(add);
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named returnNames that, given the Star Wars data, below, uses reduce to return an array containing the names of the characters.
+Write a function named returnNames that, given the Star Wars data, below, uses reduce to return an array containing the 
+names of the characters.
 ------------------------------------------------------------------------------------------------ */
 
 let starWarsData = [{
@@ -69,7 +72,8 @@ let starWarsData = [{
 }]
 
 const returnNames = (arr) => {
-  // Solution code here...
+  return arr.map(item => item.name);
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -81,13 +85,14 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (arr) => {
-  // Solution code here...
+  return arr.split('').reduce((a, b) => [b].concat(a), []).join('');
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named countNumberOfChildren that, given the array of characters, below, uses reduce to return the total number of children in the data set.
+Write a function named countNumberOfChildren that, given the array of characters, below, uses reduce to return the 
+total number of children in the data set.
 ------------------------------------------------------------------------------------------------ */
 
 const characters = [
@@ -135,7 +140,8 @@ const characters = [
 
 const countNumberOfChildren = (arr) => {
   // Solution code here...
-};
+  return arr.reduce()
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -147,6 +153,8 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 
 const calculateAverage = (arr) => {
   // Solution code here...
+  let total = arr.reduce(((accumulator, currentValue) => (accumulator + currentValue)));
+  return total/arr.length;
 };
 
 /* ------------------------------------------------------------------------------------------------
