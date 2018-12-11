@@ -27,37 +27,44 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-    for(let i=0; i<stores.length; i++){
-        let sum = 0;
-        for(let j=0; j<stores[i].length; j++){
-          sum = sum + stores[j][i];
-          // console.log(stores[j][i])
-          console.log(sum);
-    
-        }
-        // console.log(sum);
+    const storeTotals = [];
+    for(let i=0; i<hoursOpen.length; i++){
+      let sum = 0;
+      for(let j=0; j<stores.length; j++){
+        let store = stores[j]
+        sum += store[i];
       }
-
-}
+      storeTotals.push(sum);
+    }
+    return storeTotals;
+  }
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Pat has decided that he would also like to organize his data as objects containing the number of cookies sold per hour and the time.
+Pat has decided that he would also like to organize his data as objects containing the number of cookies sold per 
+hour and the time.
 
 Here is sample data for the 9:00 sales: { sales: '88 cookies', time: '9 a.m.' }.
 
-Write a function named salesData that uses forEach to iterate over the hourlySales array and create an object for each hour. Return an array of the formatted data.
+Write a function named salesData that uses forEach to iterate over the hourlySales array and create an 
+object for each hour. Return an array of the formatted data.
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
-};
+    // let dataList = data(cookieStores)
+    const myArr = [];
+    hours.forEach((hour, idx)=>{
+      myArr.push({sales:`${data[idx]} cookies`, time:hour})
+    })
+    return myArr;
+  };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named howManyTreats that will return the quantity of treats you need to pick up from the pet store today from this array.
+Write a function named howManyTreats that will return the quantity of treats you need to 
+pick up from the pet store today from this array.
 ------------------------------------------------------------------------------------------------ */
 
 const errands = [
@@ -73,7 +80,7 @@ const errands = [
 ]
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+    return arr[2].items[1].quantity;
 }
 
 /* ------------------------------------------------------------------------------------------------

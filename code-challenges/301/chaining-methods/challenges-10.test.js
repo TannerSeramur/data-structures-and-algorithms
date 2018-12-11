@@ -12,12 +12,12 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
-    let allNums = input.reduce((a,b)=> a.concat(b), []);
-    let targetNums = allNums.filter((num) => num === target);
-    return targetNums.length;
+    // let allNums = input.reduce((a,b)=> a.concat(b), []);
+    // let targetNums = allNums.filter((num) => num === target);
+    // return targetNums.length;
 
     // or this
-    // return input.reduce((a,b)=> a.concat(b), []).filter((num) => num === target).length;
+    return input.reduce((a,b)=> a.concat(b), []).filter((num) => num === target).length;
 };
 
 /* ------------------------------------------------------------------------------------------------

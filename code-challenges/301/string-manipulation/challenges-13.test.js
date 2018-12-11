@@ -58,17 +58,22 @@ Write a function named allHappy that takes in an array of strings and returns a 
 ------------------------------------------------------------------------------------------------ */
 
 const allHappy = (arr) => {
-  // Solution code here...
+  if(arr.every(str => str.includes(':)'))){
+    return true;
+  }else{
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named findAnything that takes in an array of strings, along with a target string. Return an array containing only those strings from the original array that contain the target string.
+Write a function named findAnything that takes in an array of strings, along with a target string. Return an array containing only those 
+strings from the original array that contain the target string.
 ------------------------------------------------------------------------------------------------ */
 
 const findAnything = (arr, target) => {
-  // Solution code here...
+  return arr.filter(e => e.includes(target) ? e : false);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -78,7 +83,11 @@ Write a function named findEvery that takes in an array of strings, along with a
 ------------------------------------------------------------------------------------------------ */
 
 const findEvery = (arr, target) => {
-  // Solution code here...
+  if(arr.every(str => str.includes(target))){
+    return true;
+  }else{
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
