@@ -79,7 +79,8 @@ const findAnything = (arr, target) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
 
-Write a function named findEvery that takes in an array of strings, along with a target string. Return a Boolean based on whether or not every string in the array contains the target string.
+Write a function named findEvery that takes in an array of strings, along with a target string. 
+Return a Boolean based on whether or not every string in the array contains the target string.
 ------------------------------------------------------------------------------------------------ */
 
 const findEvery = (arr, target) => {
@@ -93,9 +94,11 @@ const findEvery = (arr, target) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8
 
-We've been testing a new course enrollment system, and we think we have the bugs worked out, but in the meantime, Brook enrolled himself in a bunch of different classes to test if it was working.
+We've been testing a new course enrollment system, and we think we have the bugs worked out, but in the meantime, Brook enrolled himself in a bunch of 
+different classes to test if it was working.
 
-Write a function named unenrollBrook that takes in a two-dimensional array, where each array represents one course's roster and is an array of strings of the names of the people in that course.
+Write a function named unenrollBrook that takes in a two-dimensional array, where each array represents one course's roster and is an array of 
+strings of the names of the people in that course.
 
 Return a two-dimensional array with the same roster, but where anyone whose name includes Brook is removed from every course.
 
@@ -103,7 +106,7 @@ For example, [['Brook Testing', 'Actual Person'], ['Human Person', 'Brook again'
 ------------------------------------------------------------------------------------------------ */
 
 const unenrollBrook = (arr) => {
-  // Solution code here...
+  return arr.map(item => item.filter(name => name.includes('Brook') ? null : name));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -130,7 +133,9 @@ For example, ['Tuesday', 'Monday', 'Wednesday and Thursday', 'Tuesday 2', 'Thurs
 const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 const sortByDay = (arr) => {
-  // Solution code here...
+  return daysOfWeek.map((element, index) => {
+  return arr.filter(day => day.includes(daysOfWeek[index]));
+    })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -142,7 +147,7 @@ For example, ['abcd', 'efgh', 'ijkl', 'mnop'] returns ['a', 'f', 'k', 'p']
 ------------------------------------------------------------------------------------------------ */
 
 const characterByIndex = (arr) => {
-  // Solution code here...
+  return arr.map((element, index) => element.charAt(index));
 };
 
 /* ------------------------------------------------------------------------------------------------
