@@ -98,7 +98,8 @@ let biggerThanLuke = (arr) => {
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
-Write a function named sortBy that takes in an array of objects, each of which has a particular property, and sorts those objects by that property, lowest to highest, returning the same array.
+Write a function named sortBy that takes in an array of objects, each of which has a particular property, 
+and sorts those objects by that property, lowest to highest, returning the same array.
 
 Here is an example of the input:
 [
@@ -111,7 +112,11 @@ This data could be could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
-  // Solution code here...
+  if(isNan(arr[property])){
+    return arr.sort();
+  }else{
+    return arr.sort((a,b) => a[property]-b[property]);
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -127,7 +132,7 @@ https://secure.com returns true because the URL is secure
 https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
-// Solution code here...
+return /https:\/\//.test(url);
 }
 
 /* ------------------------------------------------------------------------------------------------
