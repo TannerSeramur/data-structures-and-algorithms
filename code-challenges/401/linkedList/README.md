@@ -1,9 +1,9 @@
 ![CF](http://i.imgur.com/7v5ASc8.png) LAB
 =================================================
 
-## Project Name
+## code challange 06
 
-### Author: Student/Group Name
+### Author: Tanner Seramur
 
 ### Links and Resources
 * [repo](https://github.com/TannerSeramur/data-structures-and-algorithms)
