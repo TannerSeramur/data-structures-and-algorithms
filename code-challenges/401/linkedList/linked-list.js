@@ -77,6 +77,28 @@ class LinkedList {
     }
     current = current.next;
   }
+  kthFromEnd(val){
+    if(!this.head){
+      throw 'error';
+    }
+    let current = this.head;
+    let count = 0;
+    while(current.next){
+      current = current.next;
+      count++
+    }
+    if(val>count){
+      return 'error list is not that big';
+    }
+    let calcNum = count - val;
+    current = this.head;
+    count = 0; 
+    while(count !== calcNum){
+      current = current.next;
+      count++
+    }
+    return current.value;
+  }
 }
 
 module.exports = LinkedList;
