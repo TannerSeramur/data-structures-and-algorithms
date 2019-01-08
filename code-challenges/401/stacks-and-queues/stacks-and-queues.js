@@ -1,56 +1,36 @@
-'use strict';
-class Node{
-    constuctor(value){
-      this.value = value;
-      this.next = null;
+class Node {
+    constructor(value){
+        this.value = value;
+        this.next = null;
     }
 }
 
-class Stack{
-    constuctor(){
-        this.top = null;
-        this.next = null
-    }
+class Stack {
+  constructor(){ 
+    this.top = null;
+    this.next = null; 
+    this.length = 0;
+  }
 
-    push(value){
-      let node = new Node(value);
-      node.next = this.top;
-      this.top = node;      
-      console.log(this.top);
-    }
+  push(value){
 
-    pop(){
-      let temp = this.top;
-      this.top = this.top.next;
-      temp.next = null;
-      return temp;
-    }
-    peek(){
-        return this.top;
-    }
-};
+    let node = new Node(value);
+    node.next = this.top;
+    this.top = node;
+    this.size++;
+  }
 
-class Queue{
-    constuctor(){
-        this.front = null;
-        this.end = null;
-    }
+  pop(){
+    let temp = this.top;
+    this.top = this.top.next;
+    this.length--;
+    return temp.value;
+  }
 
-    enqueue(value){
-      if(this.rear){
-      this.rear.next = node;
-    } else {
-      this.front = node;
-      this.rear = node;
-    }
-    }
+  peek(){
+    return this.top.value;
+  }
 
-    dequeue(){
-    
-    }
-
-    peek(){
-        return this.front;
-    }
-  // return this.stack;
 }
+module.exports = Stack;
+
