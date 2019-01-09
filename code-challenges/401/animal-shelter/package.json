@@ -1,0 +1,16 @@
+{
+  "name": "animal-shelter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fifo-animal-shelter.js",
+  "scripts": {
+    "test": "jest --coverage --verbose",
+    "test-watch": "jest --watchAll --coverage --verbose"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^23.6.0"
+  }
+}
