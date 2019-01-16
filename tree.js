@@ -144,8 +144,6 @@ tree.addValue(1);
 tree.addValue(2);
 tree.addValue(3);
 tree.addValue(4);
-tree.addValue(5);
-tree.addValue(6);
 tree.breadthFirst();
 
 
