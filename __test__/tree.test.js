@@ -33,4 +33,26 @@ describe('Running Tests on Tree Class', () => {
         expect(tree.inOrder()).toEqual([ 2, 3, 5, 6 ]);
     });
 
+});
+
+describe('Running tests on Breadth method', () => {
+    it('will throw error if tree has no values', () => {
+        let tree = new Tree();
+        expect(tree.breadthFirst()).toEqual('no items in tree');
+    });
+    it('will log the int values in the correct order', () => {
+        let tree = new Tree();
+        tree.addValue(1);
+        tree.addValue(2);
+        tree.addValue(3);
+        expect(tree.inOrder()).toEqual([ 1, 2, 3]);
+    });
+    it('will log the string values in the correct order', () => {
+        let tree = new Tree();
+        tree.addValue('hello');
+        tree.addValue('hey');
+        tree.addValue('hi');
+        expect(tree.inOrder()).toEqual(["hello", "hey", "hi"]);
+    });
+
 })

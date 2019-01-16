@@ -107,12 +107,50 @@ class Tree{
         return isTrue;
     
       }
+      breadthFirst() {
+        if (this.root === null) {
+          return 'no items in tree';
+        }
+        let queue = [];
+        queue.push(this.root);
+        let forTests = [];
+
+        
+        while (queue.length > 0) {
+          let current = queue[0];
+          console.log(current.value);
+          forTests.push(current.value);
+          
+          if (current.left !== null) {
+            queue.push(current.left)
+          }
+          if (current.right !== null) {
+            queue.push(current.right)
+          }
+          queue.shift()
+        }
+        return forTests;
+      }
+      
     
 }
+
+
 
 module.exports = Tree;
 
 let tree = new Tree();
+tree.addValue(1);
+tree.addValue(2);
+tree.addValue(3);
+tree.addValue(4);
+tree.addValue(5);
+tree.addValue(6);
+tree.breadthFirst();
+
+
+
+
 
 
 
