@@ -135,8 +135,6 @@ class Tree{
     
 }
 
-
-
 module.exports = Tree;
 
 let tree = new Tree();
