@@ -21,7 +21,16 @@ Binary Search Tree is a node-based binary tree data structure which has the prop
 We used a queue to store each value from the horizontal row starting from the root. As soon as we grabed each value and pushed it to the queue we would then go down to the next row.
 
 #### Big-O --> (O)w
+![](./assets/image1.jpeg)
+![](./assets/image2.jpeg)
 
+## 3
+### Challenge
+* Write a function called find-maximum-value which takes binary tree as its only input. Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
 
-![](image1.jpeg)
-![](image2.jpeg)
+## Approach & Efficiency
+We used a breadth search method on our tree to go through each node in the tree and compaired it to the highNum varrible and if it was a larger number it would replace the current highNum value with the new one.
+
+#### Big-O --> (O)w
+![](./assets/image3.jpeg);
+
