@@ -106,3 +106,7 @@ class BinaryTree {
     console.log(tree.fmv());
 
     module.exports = {BinaryTree, Node}
+
+
+
+    
