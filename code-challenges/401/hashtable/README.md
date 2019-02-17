@@ -9,4 +9,4 @@ Big O
 0(n)
 
 ## Solution
-![](/assets/whiteboard.jpg)
+![](./assets/whiteboard.jpg)
