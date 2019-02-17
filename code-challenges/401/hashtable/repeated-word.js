@@ -10,8 +10,6 @@ function repeatedWord(str) {
 
   for (let i = 0; i < arr.length; i++) {
     if (hash.contains(arr[i])) {
-      console.log(arr[i]);
-
       return arr[i];
     }
     hash.add(arr[i], null);
@@ -20,5 +18,6 @@ function repeatedWord(str) {
   return null;
 }
 
-console.log(repeatedWord('hi my name is hi and '));
+// console.log(repeatedWord('hi my my name is hi and '), 'lolll');
+module.exports = repeatedWord;
 

@@ -40,7 +40,7 @@ class Hashtable {
       this.search(this.table[hash], key);
       let keyObj = this.search(this.table[hash], key);
       if (keyObj) {
-        console.log(keyObj);
+        // console.log(keyObj);
         return bool = true;
       }
     }
@@ -66,11 +66,11 @@ class Hashtable {
 
 }
 
-let test = new Hashtable(5)
+// let test = new Hashtable(5)
 // test.add('one', 1);
 // test.add('two', 2);
 // test.add('three', 3);
-console.log(test);
+// console.log(test);
 // test.find('three');
 
 
