@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1550683634332" clover="3.2.0">
+  <project timestamp="1550683634332" name="All files">
+    <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1" elements="17" coveredelements="17" complexity="0" loc="10" ncloc="10" packages="1" files="1" classes="1"/>
+    <file name="quickSort.js" path="/Users/TannerSeramur/CodeFellows/data-structures-and-algorithms/code-challenges/401/quickSort/quickSort.js">
+      <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+      <line num="2" count="25" type="cond" truecount="2" falsecount="0"/>
+      <line num="3" count="14" type="stmt"/>
+      <line num="6" count="11" type="stmt"/>
+      <line num="7" count="11" type="stmt"/>
+      <line num="8" count="11" type="stmt"/>
+      <line num="10" count="11" type="stmt"/>
+      <line num="11" count="36" type="cond" truecount="2" falsecount="0"/>
+      <line num="12" count="36" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="11" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
